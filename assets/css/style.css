@@ -1,12 +1,12 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      --bg: #0d0f14;
-      --card-bg: rgba(20, 22, 32, 0.97);
-      --border: rgba(255,255,255,0.08);
-      --text-primary: #f0f0f8;
-      --text-muted: rgba(200,200,220,0.65);
-      --purple: #a78bfa;
+      --bg: #333e5b;
+      --card-bg: #f3f7bd;
+      --border: #000;
+      --text-primary:#1c1917;
+      --text-muted:#7a4624;
+      --purple: #531fed;
       --purple-dim: rgba(167,139,250,0.12);
       --red: #ff6b6b;
       --red-dim: rgba(255,107,107,0.12);
@@ -15,7 +15,7 @@
       --blue: #60a5fa;
       --blue-dim: rgba(96,165,250,0.1);
       --yellow: #facc15;
-      --yellow-dim: rgba(250,204,21,0.1);
+      --yellow-dim: rgba(223, 182, 14, 0.1);
       --radius: 20px;
       --font-head: 'Syne', sans-serif;
       --font-body: 'DM Sans', sans-serif;
@@ -69,7 +69,7 @@
       width: 22px; height: 22px;
       flex-shrink: 0;
       margin-top: 3px;
-      border: 2px solid rgba(255,255,255,0.22);
+      border: 2px solid rgba(84, 0, 0, 0.674);
       border-radius: 7px;
       cursor: pointer;
       position: relative;
@@ -264,7 +264,7 @@
       flex-wrap: wrap;
       margin-bottom: 1.25rem;
       padding: 0.7rem 1rem;
-      background: rgba(255,255,255,0.03);
+      background: rgba(8, 3, 3, 0.03);
       border-radius: 12px;
       border: 1px solid rgba(255,255,255,0.06);
     }
@@ -303,9 +303,9 @@
     .tag-chip {
       font-size: 0.74rem;
       font-weight: 500;
-      color: rgba(200,200,220,0.78);
+      color: rgba(58, 58, 135, 0.78);
       background: rgba(255,255,255,0.05);
-      border: 1px solid rgba(255,255,255,0.1);
+      border: 1px solid #000;
       border-radius: 999px;
       padding: 0.25rem 0.7rem;
     }
