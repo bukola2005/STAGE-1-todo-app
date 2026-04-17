@@ -1,0 +1,39 @@
+# HNG Stage 1a - Advanced Interactive Todo Card
+
+A stateful, interactive, and fully accessible micro-application component built for the HNG i14 Internship. This project demonstrates how to build complex, React-like state management using purely vanilla web technologies.
+
+🔗 **[Live Demo on Vercel](https://stage-1-todo-app-two.vercel.app/)**
+
+## 📌 Project Overview
+This project extends a static Stage 0 task card into a dynamic, "app-like" component. It features a central JavaScript state object that drives the UI, handling live time calculations, status synchronization, and seamless toggling between a display view and an edit form.
+
+## 🔄 What Changed from Stage 0
+- **State Engine:** Implemented a custom Vanilla JS render function that maps a central `todoState` object to the DOM, eliminating spaghetti code.
+- **Edit Mode:** Added a hidden form container that allows users to edit the title, description, priority, and due date in real-time.
+- **Dynamic Time Handling:** Built a JavaScript `setInterval` engine that calculates the difference between `Date.now()` and the due date, updating the UI every 30 seconds and triggering an "Overdue" state automatically.
+- **Expand/Collapse Logic:** Added a toggleable section for long descriptions to keep the UI clean.
+- **Status Synchronization:** Toggling the completion checkbox automatically updates the status dropdown to "Done" (and vice-versa), applying a visual strike-through to the title and halting the countdown timer.
+
+## 🎨 New Design Decisions
+- **Premium Minimalist Aesthetic:** Pivoted from a generic dark mode to a clean, "Startup/SaaS" light theme inspired by tools like Linear and Notion.
+- **Typography Upgrade:** Integrated `Plus Jakarta Sans` for strong, legible headings and `Inter` for highly readable body text.
+- **Subtle Interactions:** Replaced heavy neon glows with realistic physical drop shadows and soft background color transitions to indicate interactive elements.
+- **Semantic Color Coding:** Used muted, professional colors for statuses (e.g., emerald green for Done, terracotta/red for Overdue/High Priority) to convey information without overwhelming the user.
+
+## ♿ Accessibility (a11y) Notes
+- **Live Announcements:** The dynamic time indicator is wrapped in a container with `aria-live="polite"` to ensure screen readers announce time updates (like hitting "Overdue") without disrupting the user.
+- **Form Labels:** Every input and select dropdown in the Edit mode is explicitly tied to a `<label>` using the `for` attribute.
+- **Dynamic ARIA States:** The expand/collapse toggle dynamically updates the `aria-expanded` attribute via JavaScript to maintain accurate context for assistive technologies.
+- **Keyboard Flow:** The DOM order is structured to allow logical `Tab` navigation: Checkbox → Status Control → Expand Toggle → Edit Button. Focus styling (`focus-visible`) has been enhanced with high-contrast outlines.
+
+## ⚠️ Known Limitations
+- **No Data Persistence:** Because this is a frontend-only component built without a backend or `localStorage` integration, refreshing the page will reset the card to its default hardcoded state.
+- **Single Component Scope:** The state management is scoped to a single card for the purpose of this specific stage requirement; rendering an array of multiple cards would require refactoring the DOM targeting logic.
+
+## 🛠️ Tech Stack
+- **HTML5:** Strict semantic structuring.
+- **CSS3:** Custom variables (`:root`), flexbox/grid layouts, and responsive media queries.
+- **Vanilla JavaScript (ES6+):** Event listeners, object-based state management, date math, and interval handling.
+
+---
+*Built by Shukura Bukola Owoseni for the HNG i14 Frontend Track.*
